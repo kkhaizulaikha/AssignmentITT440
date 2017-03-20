@@ -16,12 +16,16 @@ while (0) then
 	    end
 end
 
-io.write("Choose a port > ")
-port = tonumber (io.read())
-if not port then
-	error("Invalid Input!\n")
+while (0) then
+	io.write("Choose a port > ")
+	port = tonumber (io.read())
+	if not port then
+		error("Invalid Input!\n")
+		return 0
+	else 
+		return 1
+	end
 end
-
 client = socket.connect(server, port)
 
 if client then
